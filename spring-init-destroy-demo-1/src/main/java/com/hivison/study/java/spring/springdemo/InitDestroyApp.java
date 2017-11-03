@@ -3,7 +3,6 @@ package com.hivison.study.java.spring.springdemo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.hivison.study.java.spring.springdemo.domain.Organization;
 
 public class InitDestroyApp {
 

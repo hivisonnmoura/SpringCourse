@@ -4,7 +4,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.hivison.study.java.spring.springdemo.domain.Organization;
-import com.hivison.study.java.spring.springdemo.domain.promotion.TradeFair;
 
 public class PropertiesWithXMLApp {
 
