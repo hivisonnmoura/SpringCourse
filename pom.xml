@@ -29,6 +29,8 @@
 		<module>spring-mvc-demo-1</module>
 		<module>spring-properties-annotation-demo</module>
 		<module>spring-setter-demo</module>
+        	<module>spring-jdbc-template-demo-1</module>
+      	        <module>spring-jdbc-template-demo-2</module>
     </modules>
 
     <build>
