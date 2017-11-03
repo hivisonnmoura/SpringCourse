@@ -1,5 +1,5 @@
-/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/spring_demo/serviceImpl/CloudServiceImpl.java
-/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/spring_demo/DISetterApp.java
-/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/spring_demo/Organization.java
-/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/spring_demo/service/BusinessService.java
-/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/spring_demo/serviceImpl/EcommerceServiceImpl.java
+/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/springdemo/serviceImpl/CloudServiceImpl.java
+/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/springdemo/DISetterApp.java
+/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/springdemo/service/BusinessService.java
+/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/springdemo/domain/Organization.java
+/home/mtuser/eclipse-workspace/Spring/spring-di-setter-demo/src/main/java/com/hivison/study/java/spring/springdemo/serviceImpl/EcommerceServiceImpl.java

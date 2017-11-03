@@ -1,1 +1,3 @@
-/home/mtuser/eclipse-workspace/Spring/spring-ioc-demo-1/src/main/java/com/hivison/study/java/spring/spring_demo/App.java
+/home/mtuser/eclipse-workspace/Spring/spring-bean-factory-demo/src/main/java/com/hivison/study/java/spring/spring_demo/BeanFactoryApp.java
+/home/mtuser/eclipse-workspace/Spring/spring-bean-factory-demo/src/main/java/com/hivison/study/java/spring/spring_demo/OrganizationFactory.java
+/home/mtuser/eclipse-workspace/Spring/spring-bean-factory-demo/src/main/java/com/hivison/study/java/spring/spring_demo/Organization.java

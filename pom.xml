@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hivison.study.java.spring</groupId>
+    <artifactId>spring-studies</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>mavendemo</module>
+        <module>spring-autowired-annotation-demo</module>
+		<module>spring-bean-factory-demo</module>
+		<module>spring-bean-scope-demo</module>
+		<module>spring-bean-web-scope-demo</module>
+		<module>spring-cnamespace-demo</module>
+		<module>spring-pnamespace-demo</module>
+		<module>spring-component-demo</module>
+		<module>spring-constructor-args-demo</module>
+		<module>spring-di-constructor-demo</module>
+		<module>spring-di-setter-demo</module>
+		<module>spring-init-destroy-demo-1</module>
+		<module>spring-ioc-demo-1</module>
+		<module>spring-ioc-demo-2</module>
+		<module>spring-ioc-demo-challenge</module>
+		<module>spring-properties-xml-demo</module>
+		<module>spring-mvc-demo-1</module>
+		<module>spring-properties-annotation-demo</module>
+		<module>spring-setter-demo</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
