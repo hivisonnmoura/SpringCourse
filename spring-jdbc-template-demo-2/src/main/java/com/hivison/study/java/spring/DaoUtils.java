@@ -1,10 +1,10 @@
 package com.hivison.study.java.spring;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.hivison.study.java.spring.dao.OrganizationDAO;
 import com.hivison.study.java.spring.domain.Organization;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DaoUtils {
 
@@ -32,9 +32,8 @@ public class DaoUtils {
 	}
 
 	public static void createSeedData(OrganizationDAO dao) {
-		Organization organization1 = new Organization("Amazon", 1994, "65656", 8765,
-				"Work hard, have fun, make history");
-		Organization organization2 = new Organization("BMW", 1929, "45454", 5501, "We build ultimate Driving machines");
+        Organization organization1 = new Organization("Amazon", 1994, "65656", 8765, "Work hard, have fun, make history");
+        Organization organization2 = new Organization("BMW", 1929, "45454", 5501, "We build ultimate Driving machines");
 		Organization organization3 = new Organization("Google", 1996, "57575", 4567, "Don't be evil");
 
 		List<Organization> orgs = new ArrayList<>();
@@ -42,13 +41,8 @@ public class DaoUtils {
 		orgs.add(1, organization2);
 		orgs.add(2, organization3);
 
-		int createCount = 0;
+        long createCount = orgs.stream().filter(org -> dao.create(org)).count();
 
-		for (Organization organization : orgs) {
-			boolean isCreated = dao.create(organization);
-			if (isCreated)
-				createCount += 1;
-		}
 		System.out.println("Created " + createCount + " organizations");
 	}
 
