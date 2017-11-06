@@ -2,4 +2,6 @@
 /.recommenders/
 *Servers/
 *RemoteSystemsTempFiles/
-*target/
+*/target/**
+.idea/
+*.iml
