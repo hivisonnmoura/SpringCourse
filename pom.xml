@@ -31,6 +31,7 @@
 		<module>spring-setter-demo</module>
         	<module>spring-jdbc-template-demo-1</module>
       	        <module>spring-jdbc-template-demo-2</module>
+		<module>spring-jdbc-exception-demo</module>
     </modules>
 
     <build>
