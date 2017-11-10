@@ -37,6 +37,7 @@
         <module>spring-mvc-jndi-demo</module>
         <module>spring-mvc-handler-mapping-adapter-demo</module>
         <module>spring-mvc-interceptor-demo-1</module>
+        <module>spring-logging-demo-1</module>
     </modules>
 
     <build>
