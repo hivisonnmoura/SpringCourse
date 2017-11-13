@@ -15,8 +15,7 @@
 		<module>spring-bean-factory-demo</module>
 		<module>spring-bean-scope-demo</module>
 		<module>spring-bean-web-scope-demo</module>
-		<module>spring-cnamespace-demo</module>
-		<module>spring-pnamespace-demo</module>
+		<module>spring-cnamespace-demo</module>	
 		<module>spring-component-demo</module>
 		<module>spring-constructor-args-demo</module>
 		<module>spring-di-constructor-demo</module>
@@ -25,19 +24,20 @@
 		<module>spring-ioc-demo-1</module>
 		<module>spring-ioc-demo-2</module>
 		<module>spring-ioc-demo-challenge</module>
-		<module>spring-properties-xml-demo</module>
-		<module>spring-mvc-demo-1</module>
-		<module>spring-properties-annotation-demo</module>
-		<module>spring-setter-demo</module>
         <module>spring-jdbc-template-demo-1</module>
-      	<module>spring-jdbc-template-demo-2</module>
-		<module>spring-jdbc-exception-demo</module>
-        <module>spring-mvc-java-config-demo</module>
-        <module>spring-named-jdbc-template-demo-1</module>
-        <module>spring-mvc-jndi-demo</module>
+        <module>spring-jdbc-template-demo-2</module>
+        <module>spring-logging-demo-1</module>
+        <module>spring-mvc-demo-1</module>
         <module>spring-mvc-handler-mapping-adapter-demo</module>
         <module>spring-mvc-interceptor-demo-1</module>
-        <module>spring-logging-demo-1</module>
+        <module>spring-mvc-interceptor-demo-2</module>
+        <module>spring-mvc-java-config-demo</module>
+        <module>spring-mvc-jndi-demo</module>
+        <module>spring-named-jdbc-template-demo-1</module>
+        <module>spring-pnamespace-demo</module>
+   		<module>spring-properties-annotation-demo</module>
+		<module>spring-properties-xml-demo</module>
+		<module>spring-setter-demo</module>
     </modules>
 
     <build>

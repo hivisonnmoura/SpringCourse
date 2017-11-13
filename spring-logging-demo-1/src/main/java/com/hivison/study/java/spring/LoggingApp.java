@@ -33,7 +33,7 @@ public class LoggingApp {
 		daoUtils.printSuccessFailure(daoUtils.createOperation, isCreated);
 		daoUtils.printOrganizations(dao.getAllOrganizations(), daoUtils.readOperation);
 
-		// get a single organization
+		// get a single organization 
 		Organization org2 = dao.getOrganization(1);
 		daoUtils.printOrganization(org2, "getOrganization");
 
