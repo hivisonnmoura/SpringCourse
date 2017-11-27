@@ -4,12 +4,26 @@
 	<groupId>com.hivison.study.java.spring</groupId>
 	<artifactId>spring-named-jdbc-template-demo-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
-
+	<name>spring-named-jdbc-template-demo-1</name>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>9</source>
+					<target>9</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
 		<dependency>
@@ -51,5 +65,4 @@
 
 	</dependencies>
 
-	<name>spring-named-jdbc-template-demo-1</name>
 </project>
