@@ -1,0 +1,49 @@
+package com.hivison.study.java.spring.interceptors;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+@Service
+public class ExecutionTimerInterceptor implements HandlerInterceptor {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ExecutionTimerInterceptor.class);
+
+	long PREHANDLE_TIME = 0;
+	long POSTHANDLE_TIME = 0;
+	long AFTER_COMPLETION_TIME = 0;
+
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+			throws Exception {
+		PREHANDLE_TIME = System.currentTimeMillis();
+		LOG.info("Info Message: PREHANDLE_TIME = " + PREHANDLE_TIME);
+
+		return true;
+	}
+
+	@Override
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
+			ModelAndView modelAndView) throws Exception {
+		POSTHANDLE_TIME = System.currentTimeMillis();
+		LOG.info("Info message: POSTHANDLER_TIME = " + POSTHANDLE_TIME);
+	}
+
+	@Override
+	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
+			throws Exception {
+
+	AFTER_COMPLETION_TIME = System.currentTimeMillis();
+	LOG.info("Ingo Message: AFTER_COMPLETION_TIME = " + AFTER_COMPLETION_TIME);
+	long HANDLER_EXECUTION_TIME = POSTHANDLE_TIME - PREHANDLE_TIME;
+	long TOTAL_EXECUTION_TIME = AFTER_COMPLETION_TIME - PREHANDLE_TIME;
+	LOG.info("Info Message: HANDLER_EXECUTION_TIME = "+ HANDLER_EXECUTION_TIME);
+	LOG.info("Info Message: TOTAL_ECXECUTION_TIME = " + TOTAL_EXECUTION_TIME);
+	}
+
+}
