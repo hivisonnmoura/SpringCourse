@@ -28,7 +28,7 @@ public class ModelAttribureDemoController {
 	public ModelAndView home2() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("modelAttributeHome");
-		mav.addObject("anAddress", new Address());
+		mav.addObject("command", new Address());
 
 		return mav;
 	}
