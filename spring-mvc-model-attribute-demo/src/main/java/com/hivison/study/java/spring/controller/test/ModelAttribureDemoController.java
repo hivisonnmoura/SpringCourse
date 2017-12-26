@@ -6,8 +6,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hivison.study.java.spring.domain.Address;
@@ -94,5 +96,12 @@ public class ModelAttribureDemoController {
 	public Address modelAttributeTest4() {
 		LOGGER.info("INSIDE modelAttributeTest4");
 		return new Address("Sydney", "200");
+	}
+	//Test 5: Testing the @ModelAttribute with 'value' attribute and default binding
+	@RequestMapping(value = "/test5", method = RequestMethod.POST)
+	public String modelAttributeTest5(@ModelAttribute(value = "anAddress") Address anAddress, ModelMap model){
+		model.addAttribute("testdata5", anAddress.getCity());
+		model.addAttribute("testdata5B", anAddress.getZipCode());
+		return "modelAttributeTest";
 	}
 }
