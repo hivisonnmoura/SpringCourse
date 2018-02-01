@@ -11,3 +11,5 @@
 .sonarlint/
 .project/
 .settings/
+.classpath
+.SpringBeans
