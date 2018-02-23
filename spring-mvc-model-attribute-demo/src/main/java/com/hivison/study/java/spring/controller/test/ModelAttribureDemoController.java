@@ -17,91 +17,100 @@ import com.hivison.study.java.spring.domain.Address;
 @Controller
 public class ModelAttribureDemoController {
 
-	private static Logger LOGGER = LoggerFactory.getLogger(ModelAttribureDemoController.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(ModelAttribureDemoController.class);
 
-	@RequestMapping(value = "/home")
-	public String home() {
-		LOGGER.info("INSIDE home: " + System.currentTimeMillis());
-		return "modelAttributeHome";
-	}
+    @RequestMapping(value = "/home")
+    public String home() {
+        LOGGER.info("INSIDE home: " + System.currentTimeMillis());
+        return "modelAttributeHome";
+    }
 
-	// Version 2 of our home() method
-	@RequestMapping(value = "/home2")
-	public ModelAndView home2() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("modelAttributeHome");
-		mav.addObject("command", new Address());
+    // Version 2 of our home() method
+    @RequestMapping(value = "/home2")
+    public ModelAndView home2() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("modelAttributeHome");
+        mav.addObject("command", new Address());
 
-		return mav;
-	}
+        return mav;
+    }
 
-	// Version 3 of our home() method
-	@RequestMapping(value = "/home3")
-	public ModelAndView home3() {
-		ModelAndView mav = new ModelAndView("modelAttributeHome");
-		mav.addObject("anAddress", new Address());
+    // Version 3 of our home() method
+    @RequestMapping(value = "/home3")
+    public ModelAndView home3() {
+        ModelAndView mav = new ModelAndView("modelAttributeHome");
+        mav.addObject("anAddress", new Address());
 
-		return mav;
-	}
+        return mav;
+    }
 
-	// Version 4 of our home() method
-	@RequestMapping(value = "/home4")
-	public ModelAndView home4() {
-		return new ModelAndView("modelAttributeHome", "anAddress", new Address("Melborne", "3000"));
-	}
+    // Version 4 of our home() method
+    @RequestMapping(value = "/home4")
+    public ModelAndView home4() {
+        return new ModelAndView("modelAttributeHome", "anAddress", new Address("Melborne", "3000"));
+    }
 
-	// Version 5 of our home() method
-	@RequestMapping(value = "/home5")
-	public String home5(Model model) {
-		model.addAttribute("anAddress", new Address("Brisbane", "4000"));
-		return "modelAttributeHome";
-	}
+    // Version 5 of our home() method
+    @RequestMapping(value = "/home5")
+    public String home5(Model model) {
+        model.addAttribute("anAddress", new Address("Brisbane", "4000"));
+        return "modelAttributeHome";
+    }
 
-	/*
-	 * Test series to determine nature off the @ModelAttribute annotation (on a
-	 * method)
-	 */
+    /*
+     * Test series to determine nature off the @ModelAttribute annotation (on a
+     * method)
+     */
 
-	// Test1: demonstrating the usage of @ModelAttribute annotation (on a method)
-	// to add multiples attributes
-	@ModelAttribute
-	public void modelAttributeTest1(Model model) {
-		LOGGER.info("INSIDE modelAttributeTest1: " + System.currentTimeMillis());
-		model.addAttribute("testdata1A", "Welcome to the @ModelAttribute Test bed !");
-		model.addAttribute("testdata1B", "We will usages of the @ModelAttribute, on methods and arguments");
+    // Test1: demonstrating the usage of @ModelAttribute annotation (on a method)
+    // to add multiples attributes
+    @ModelAttribute
+    public void modelAttributeTest1(Model model) {
+        LOGGER.info("INSIDE modelAttributeTest1: " + System.currentTimeMillis());
+        model.addAttribute("testdata1A", "Welcome to the @ModelAttribute Test bed !");
+        model.addAttribute("testdata1B", "We will usages of the @ModelAttribute, on methods and arguments");
 
-	}
+    }
 
-	// Test 2: Demostraiting the usage of the 'name' attribute of the
-	// @ModelAttribute annotation (on method)
-	@ModelAttribute(name = "testdata2")
-	public String modelAttributeTest2() {
-		LOGGER.info("INSIDE modelAttributeTest2");
-		return "We will conduct a series of tests here.";
-	}
+    // Test 2: Demostraiting the usage of the 'name' attribute of the
+    // @ModelAttribute annotation (on method)
+    @ModelAttribute(name = "testdata2")
+    public String modelAttributeTest2() {
+        LOGGER.info("INSIDE modelAttributeTest2");
+        return "We will conduct a series of tests here.";
+    }
 
-	// Test3: Demonstrating the usage of the @ModelAttribute annotation (on a
-	// method) to implicitly add an attribute
-	// by returning it and also demonstrating the usage of the 'value' attribute of
-	// the @ModelAttribute annotation (on a method)
-	@ModelAttribute(value = "testdata3")
-	public Address modelAttributeTest3() {
-		LOGGER.info("INSIDE modelAttributeTest3");
-		return new Address("Adelaide", "5000");
-	}
+    // Test3: Demonstrating the usage of the @ModelAttribute annotation (on a
+    // method) to implicitly add an attribute
+    // by returning it and also demonstrating the usage of the 'value' attribute of
+    // the @ModelAttribute annotation (on a method)
+    @ModelAttribute(value = "testdata3")
+    public Address modelAttributeTest3() {
+        LOGGER.info("INSIDE modelAttributeTest3");
+        return new Address("Adelaide", "5000");
+    }
 
-	// Test4: Demonstrating the default naming strategy of the @NodelAttribute
-	// annotation (on a method)
-	@ModelAttribute
-	public Address modelAttributeTest4() {
-		LOGGER.info("INSIDE modelAttributeTest4");
-		return new Address("Sydney", "200");
-	}
-	//Test 5: Testing the @ModelAttribute with 'value' attribute and default binding
-	@RequestMapping(value = "/test5", method = RequestMethod.POST)
-	public String modelAttributeTest5(@ModelAttribute(value = "anAddress") Address anAddress, ModelMap model){
-		model.addAttribute("testdata5A", anAddress.getCity());
-		model.addAttribute("testdata5B", anAddress.getZipCode());
-		return "modelAttributeTest";
-	}
+    // Test4: Demonstrating the default naming strategy of the @ModelAttribute
+    // annotation (on a method)
+    @ModelAttribute
+    public Address modelAttributeTest4() {
+        LOGGER.info("INSIDE modelAttributeTest4");
+        return new Address("Sydney", "200");
+    }
+
+    //Test 5: Testing the @ModelAttribute with 'value' attribute and default binding
+    @RequestMapping(value = "/test5", method = RequestMethod.POST)
+    public String modelAttributeTest5(@ModelAttribute(value = "anAddress") Address anAddress, ModelMap model) {
+        model.addAttribute("testdata5A", anAddress.getCity());
+        model.addAttribute("testdata5B", anAddress.getZipCode());
+        return "modelAttributeTest";
+    }
+
+    //Test 6: Test to determine nature of how the @ModelAttribute(on method) and @RequestMapping
+    //work with no explicit logical view name
+    @RequestMapping(value = "/modelAttributeTest")
+    @ModelAttribute("testdata6")
+    public Address modelAttributeTest6() {
+        return new Address("Canberra", "2600");
+    }
 }
