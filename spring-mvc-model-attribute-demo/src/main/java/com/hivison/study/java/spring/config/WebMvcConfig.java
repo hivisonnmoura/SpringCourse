@@ -2,6 +2,7 @@ package com.hivison.study.java.spring.config;
 
 import javax.sql.DataSource;
 
+import com.hivison.study.java.spring.interceptors.VisitorInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -24,6 +25,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Autowired
     private ExecutionTimerInterceptor executionTimerInterceptor;
+
+    @Autowired
+    private VisitorInterceptor visitorInterceptor;
 
     @Bean
     public DataSource dataSource() {
@@ -52,6 +56,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(headerInterceptor);
+        registry.addInterceptor(visitorInterceptor);
         registry.addInterceptor(executionTimerInterceptor).addPathPatterns("/location");
     }
 
